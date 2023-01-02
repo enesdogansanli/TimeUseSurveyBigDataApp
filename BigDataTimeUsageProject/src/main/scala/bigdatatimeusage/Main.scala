@@ -86,8 +86,6 @@ object TimeUsage {
 
   def classifiedColumns(columnNames: List[String]): (List[Column], List[Column], List[Column]) = {
 
-    //    def columnNameStartsWithKey(columnIds: String): Array[Column] = columnIds.split(",").map(new Column(_))
-
     def columnNameStartsWithKey(colName: String, keys: List[String]):Boolean = !keys.filter(key => colName.startsWith(key)).isEmpty
 
     val primaryNeedsKeys = List("t01", "t03", "t11", "t1801", "t1803")
